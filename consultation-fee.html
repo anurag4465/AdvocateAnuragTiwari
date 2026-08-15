@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation Fee | Adv. Anurag Tiwari</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: #333; line-height: 1.6; background-color: #f8f9fa; }
+        header { background-color: #1a252f; color: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.4rem; font-weight: bold; color: #d4af37; text-decoration: none; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        nav a:hover, nav a.active { color: #d4af37; }
+        .page-header { background: #1a252f; color: #fff; text-align: center; padding: 50px 20px; border-bottom: 3px solid #d4af37; }
+        
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Fee Plans Grid */
+        .fee-plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .plan-card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #d4af37; position: relative; }
+        .plan-price { font-size: 2rem; font-weight: bold; color: #1a252f; margin: 15px 0; }
+        .plan-features { list-style: none; margin-bottom: 20px; text-align: left; }
+        .plan-features li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+
+        /* Payment Section */
+        .payment-box { background: #1a252f; color: #fff; padding: 35px; border-radius: 8px; text-align: center; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .payment-box h3 { color: #d4af37; margin-bottom: 10px; font-size: 1.4rem; }
+        .qr-img { border-radius: 8px; border: 3px solid #d4af37; background: #fff; padding: 8px; margin: 20px 0; width: 180px; height: 180px; }
+        
+        .btn { display: inline-block; background-color: #d4af37; color: #1a252f; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-top: 10px; border: none; }
+        .btn:hover { background-color: #b89628; }
+        
+        .note-box { background: #fff3cd; color: #856404; padding: 15px; border-radius: 6px; border-left: 4px solid #ffeeba; margin: 30px 0 10px 0; text-align: center; font-size: 0.95rem; }
+
+        footer { background-color: #111; color: #aaa; text-align: center; padding: 20px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Adv. Anurag Tiwari</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="consultation-fee.html" class="active">Consultation Fee</a>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Consultation Fee & Payment</h1>
+        <p>Book Legal Guidance for Allahabad High Court & General Legal Matters</p>
+    </div>
+
+    <div class="container">
+        
+        <!-- Fee Options -->
+        <div class="fee-plans">
+            
+            <!-- Plan 1 -->
+            <div class="plan-card">
+                <h3>Phone / WhatsApp Consultation</h3>
+                <div class="plan-price">₹500</div>
+                <ul class="plan-features">
+                    <li>✔ Up to 15-20 Minutes Telephonic Guidance</li>
+                    <li>✔ Case Legal Feasibility Check</li>
+                    <li>✔ Basic Legal Roadmap & Advice</li>
+                </ul>
+                <a href="#payment-section" class="btn">Pay ₹500 Now</a>
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="plan-card" style="border-top-color: #1a252f;">
+                <h3>Chamber / File Scrutiny</h3>
+                <div class="plan-price">₹1,100</div>
+                <ul class="plan-features">
+                    <li>✔ In-Person Chamber Consultation</li>
+                    <li>✔ Complete Case File & Document Study</li>
+                    <li>✔ Detailed High Court Writ & Bail Strategy</li>
+                </ul>
+                <a href="#payment-section" class="btn">Pay ₹1,100 Now</a>
+            </div>
+
+        </div>
+
+        <!-- Note -->
+        <div class="note-box">
+            <strong>Note:</strong> High Court me case file (retain) hone par aapki di gayi consultation fee main legal fee me adjust kar di jayegi.
+        </div>
+
+        <!-- Payment Box -->
+        <div class="payment-box" id="payment-section">
+            <h3>Scan & Pay via Any UPI App</h3>
+            <p style="font-size: 0.9rem; color: #ccc;">Paytm, Google Pay, PhonePe, BHIM ya kisi bhi UPI App se QR Scan karein</p>
+            
+            <!-- Dynamic QR Code (Appki UPI ID ke hisab se render hoga) -->
+            <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=YOUR_UPI_ID@upi&pn=Adv%20Anurag%20Tiwari" alt="Payment QR Code">
+            
+            <p>UPI ID: <strong style="color: #d4af37;">YOUR_UPI_ID@upi</strong></p>
+            
+            <a href="upi://pay?pa=YOUR_UPI_ID@upi&pn=Adv%20Anurag%20Tiwari&cu=INR" class="btn" style="width: 100%; max-width: 250px;">Pay via UPI App</a>
+            
+            <p style="font-size: 0.8rem; margin-top: 15px; color: #aaa;">Payment karne ke baad receipt ka screenshot WhatsApp (+91-XXXXXXXXXX) par zaroor bhejein.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Adv. Anurag Tiwari | Allahabad High Court. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
