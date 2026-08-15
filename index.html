@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advocate | Allahabad High Court</title>
+    <title>Adv. Anurag Tiwari | Allahabad High Court</title>
     <style>
-        /* Modern Reset & Styling */
+        /* Modern Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -19,7 +19,7 @@
             background-color: #f8f9fa;
         }
 
-        /* Header & Navigation */
+        /* Header Navigation */
         header {
             background-color: #1a252f;
             color: #fff;
@@ -35,7 +35,8 @@
         .logo {
             font-size: 1.4rem;
             font-weight: bold;
-            color: #d4af37; /* Gold Accent */
+            color: #d4af37;
+            text-decoration: none;
         }
 
         nav a {
@@ -46,11 +47,11 @@
             transition: color 0.3s;
         }
 
-        nav a:hover {
+        nav a:hover, nav a.active {
             color: #d4af37;
         }
 
-        /* Hero Section */
+        /* Hero Banner */
         .hero {
             background: linear-gradient(rgba(26, 37, 47, 0.85), rgba(26, 37, 47, 0.85)), 
                         url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80');
@@ -58,7 +59,7 @@
             background-position: center;
             color: #fff;
             text-align: center;
-            padding: 100px 20px;
+            padding: 90px 20px;
         }
 
         .hero h1 {
@@ -69,7 +70,7 @@
         .hero p {
             font-size: 1.2rem;
             color: #ddd;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto 25px auto;
         }
 
@@ -80,8 +81,7 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
-            border: none;
-            cursor: pointer;
+            display: inline-block;
             transition: background 0.3s;
         }
 
@@ -89,7 +89,7 @@
             background-color: #b89628;
         }
 
-        /* Section Container */
+        /* Section Setup */
         .container {
             max-width: 1100px;
             margin: 50px auto;
@@ -103,7 +103,7 @@
             color: #1a252f;
         }
 
-        /* Legal Services Grid */
+        /* Services Grid on Home Page */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -123,63 +123,36 @@
             color: #1a252f;
         }
 
-        /* Form & Payment Section */
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .form-box, .payment-box {
-            flex: 1;
-            min-width: 300px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
+        .service-card p {
+            color: #555;
+            font-size: 0.95rem;
             margin-bottom: 15px;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
+        .link-more {
+            color: #1a252f;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.9rem;
         }
 
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .link-more:hover {
+            color: #d4af37;
         }
 
-        /* Payment Details */
-        .payment-box {
-            text-align: center;
+        /* Quick Action Section */
+        .cta-box {
             background: #1a252f;
             color: #fff;
-        }
-
-        .payment-box h3 {
-            color: #d4af37;
-            margin-bottom: 15px;
-        }
-
-        .qr-placeholder {
-            width: 180px;
-            height: 180px;
-            background: #fff;
-            margin: 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
+            text-align: center;
+            padding: 40px 20px;
             border-radius: 8px;
-            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        .cta-box h2 {
+            color: #d4af37;
+            margin-bottom: 10px;
         }
 
         /* Footer */
@@ -194,7 +167,7 @@
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; }
             nav { margin-top: 15px; }
-            nav a { margin: 0 10px; }
+            nav a { margin: 0 8px; }
         }
     </style>
 </head>
@@ -202,122 +175,91 @@
 
     <!-- Header Navigation -->
     <header>
-        <div class="logo">Adv. Anurag Tiwari | High Court</div>
+        <a href="index.html" class="logo">Adv. Anurag Tiwari</a>
         <nav>
-<a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
-            <a href="consultation-fee.html" class="active">Consultation Fee</a>
+            <a href="consultation-fee.html">Consultation Fee</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <h1>Allahabad High Court Practice</h1>
-        <p>Civil, Criminal, Writ Petition, aur Family Matters me expert legal representation aur legal consultation.</p>
-        <a href="#contact" class="btn">Book Consultation</a>
+        <p>Writ Petitions, Criminal, Civil, GST, aur Driving Licence/RTO legal matters me expert legal guidance.</p>
+        <a href="contact.html" class="btn">Book Consultation</a>
     </section>
 
     <!-- Services Section -->
-    <div class="container" id="services">
-        <h2 class="section-title">Legal Services</h2>
+    <div class="container">
+        <h2 class="section-title">Key Legal Services</h2>
+        
         <div class="services-grid">
+            
+            <!-- 1. Writ Petitions -->
             <div class="service-card">
-                <h3>Writ Petitions</h3>
-                <p>High Court me Article 226/227 ke tehat Civil & Service Matters par Writ Petition filing.</p>
+                <h3>High Court Writs</h3>
+                <p>Service matters, police protection, aur land acquisition me Article 226/227 ke tehat Writ Petitions.</p>
+                <a href="services.html" class="link-more">Learn More &rarr;</a>
             </div>
+
+            <!-- 2. Criminal Cases -->
             <div class="service-card">
                 <h3>Criminal Matters</h3>
-                <p>Bail Applications, Anticipatory Bail, Criminal Appeals aur 482 Applications.</p>
+                <p>Anticipatory Bail, Regular Bail, 482 Applications, aur High Court Appeals.</p>
+                <a href="services.html" class="link-more">Learn More &rarr;</a>
             </div>
+
+            <!-- 3. GST Services -->
+            <div class="service-card">
+                <h3>GST & Taxation</h3>
+                <p>GST registration, legal notice replies, aur High Court/Appellate tax appeals.</p>
+                <a href="services.html" class="link-more">Learn More &rarr;</a>
+            </div>
+
+            <!-- 4. Driving Licence & RTO -->
+            <div class="service-card">
+                <h3>Driving Licence & RTO</h3>
+                <p>DL suspension appeals, heavy challans, aur MACT (Accident Claim) cases.</p>
+                <a href="services.html" class="link-more">Learn More &rarr;</a>
+            </div>
+
+            <!-- 5. Civil & Property -->
             <div class="service-card">
                 <h3>Civil & Property</h3>
-                <p>Property disputes, Stay Orders, Land Acquisition aur Civil Appeals.</p>
+                <p>Property disputes, Stay Orders, Land Acquisition aur Civil Appeals (FAFO).</p>
+                <a href="services.html" class="link-more">Learn More &rarr;</a>
             </div>
+
+            <!-- 6. Family Matters -->
             <div class="service-card">
-                <h3>Legal Opinion</h3>
-                <p>Legal documents ki scrutiny aur High Court matters par expert legal guidance.</p>
+                <h3>Family & Matrimonial</h3>
+                <p>Divorce proceedings, Maintenance (125 CrPC), aur Domestic Violence matters.</p>
+                <a href="services.html" class="link-more">Learn More &rarr;</a>
             </div>
+
         </div>
-    </div>
 
-    <!-- Contact & Payment Section -->
-    <div class="container" id="contact">
-        <h2 class="section-title">Contact & Consultation Fee</h2>
-        <div class="flex-container">
-            
-            <!-- Contact Form -->
-            <div class="form-box">
-                <h3 style="margin-bottom: 15px; color: #1a252f;">Send Case Query</h3>
-                <form id="legalForm">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" required placeholder="Aapka naam">
-                    </div>
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="tel" required placeholder="Mobile number">
-                    </div>
-                    <div class="form-group">
-                        <label>Case Type</label>
-                        <input type="text" placeholder="e.g., Bail, Writ Petition, Civil">
-                    </div>
-                    <div class="form-group">
-                        <label>Case Details</label>
-                        <textarea rows="4" placeholder="Apne matter ki brief jaankari dein"></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%;">Submit Case Query</button>
-                </form>
-            </div>
+        <!-- View All Services Banner -->
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="services.html" class="btn">View All Services</a>
+        </div>
 
-            <!-- Payment Box -->
-            <div class="payment-box" id="payment">
-                <h3>Online Consultation Fee</h3>
-                <p>Legal advice aur file study ke liye consultation fee online pay karein.</p>
-                
-                <div class="qr-placeholder">
-                    <img src="QR.png" alt="UPI QR Code" style="width: 180px; height: 180px; border-radius: 8px; margin: 20px auto; display: block; border: 2px solid #d4af37;">
-                </div>
-                
-                <p style="font-size: 0.9rem; margin-bottom: 15px;">UPI ID: <strong>7838779534@upi</strong></p>
-                
-                <!-- Direct Payment Link Button (e.g., Razorpay / Paytm Link) -->
-                <a href="upi://pay?pa=YOUR_UPI_ID@upi&pn=Adv. Anurag Tiwari&cu=INR" class="btn" style="display: block; margin-top: 15px;">Pay via UPI App</a>
-                <!-- <a href="https://razorpay.me/" target="_blank" class="btn" style="display: block; margin-top: 15px;">Pay Fee via Card/UPI</a> -->
-            </div>
-
+        <!-- Call to Action Box -->
+        <div class="cta-box">
+            <h2>Need Immediate Legal Guidance?</h2>
+            <p style="margin-bottom: 20px;">Direct WhatsApp Query bhej kar ya Online Fee Pay karke appointment confirm karein.</p>
+            <a href="contact.html" class="btn" style="margin-right: 10px;">Contact Chamber</a>
+            <a href="consultation-fee.html" class="btn" style="background: transparent; color: #d4af37; border: 1px solid #d4af37;">Pay Consultation Fee</a>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Adv. ANURAG TIWARI | Allahabad High Court, Prayagraj. All Rights Reserved.</p>
-        <p style="font-size: 0.8rem; margin-top: 5px;">Disclaimer: As per Advocates Act & Bar Council of India rules, this website is meant only for information purposes.</p>
+        <p>&copy; 2026 Adv. Anurag Tiwari | Allahabad High Court, Prayagraj. All Rights Reserved.</p>
     </footer>
 
-    <script>
-document.getElementById('legalForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Client inputs
-    var name = this.querySelector('input[placeholder="Aapka naam"]').value;
-    var phone = this.querySelector('input[placeholder="Mobile number"]').value;
-    var caseType = this.querySelector('input[placeholder="e.g., Bail, Writ Petition, Civil"]').value;
-    var message = this.querySelector('textarea').value;
-    
-    // Aapka WhatsApp Number (Country code ke saath, bina '+' sign ke)
-    var myPhoneNumber = "917982458892"; // Apna 10-digit number yahan daalein
-    
-    var whatsappUrl = "https://wa.me/" + myPhoneNumber + "?text=" 
-        + "*New Case Query*%0A%0A"
-        + "*Name:* " + encodeURIComponent(name) + "%0A"
-        + "*Phone:* " + encodeURIComponent(phone) + "%0A"
-        + "*Case Type:* " + encodeURIComponent(caseType) + "%0A"
-        + "*Message:* " + encodeURIComponent(message);
-        
-    window.open(whatsappUrl, '_blank');
-});
-    </script>
 </body>
 </html>
