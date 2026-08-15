@@ -295,11 +295,27 @@
     </footer>
 
     <script>
-        document.getElementById('legalForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Aapki query submit ho gayi hai. Hum aapse jald hi sampark karenge.');
-            this.reset();
-        });
+document.getElementById('legalForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Client inputs
+    var name = this.querySelector('input[placeholder="Aapka naam"]').value;
+    var phone = this.querySelector('input[placeholder="Mobile number"]').value;
+    var caseType = this.querySelector('input[placeholder="e.g., Bail, Writ Petition, Civil"]').value;
+    var message = this.querySelector('textarea').value;
+    
+    // Aapka WhatsApp Number (Country code ke saath, bina '+' sign ke)
+    var myPhoneNumber = "91XXXXXXXXXX"; // Apna 10-digit number yahan daalein
+    
+    var whatsappUrl = "https://wa.me/" + myPhoneNumber + "?text=" 
+        + "*New Case Query*%0A%0A"
+        + "*Name:* " + encodeURIComponent(name) + "%0A"
+        + "*Phone:* " + encodeURIComponent(phone) + "%0A"
+        + "*Case Type:* " + encodeURIComponent(caseType) + "%0A"
+        + "*Message:* " + encodeURIComponent(message);
+        
+    window.open(whatsappUrl, '_blank');
+});
     </script>
 </body>
 </html>
