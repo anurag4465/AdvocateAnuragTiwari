@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocate | Allahabad High Court</title>
+    <style>
+        /* Modern Reset & Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #1a252f;
+            color: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #d4af37; /* Gold Accent */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 37, 47, 0.85), rgba(26, 37, 47, 0.85)), 
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+        }
+
+        .btn {
+            background-color: #d4af37;
+            color: #1a252f;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b89628;
+        }
+
+        /* Section Container */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #1a252f;
+        }
+
+        /* Legal Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #d4af37;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: #1a252f;
+        }
+
+        /* Form & Payment Section */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .form-box, .payment-box {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Payment Details */
+        .payment-box {
+            text-align: center;
+            background: #1a252f;
+            color: #fff;
+        }
+
+        .payment-box h3 {
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .qr-placeholder {
+            width: 180px;
+            height: 180px;
+            background: #fff;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 15px; }
+            nav a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">Adv. [Aapka Naam] | High Court</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#payment">Consultation Fee</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Allahabad High Court Practice</h1>
+        <p>Civil, Criminal, Writ Petition, aur Family Matters me expert legal representation aur legal consultation.</p>
+        <a href="#contact" class="btn">Book Consultation</a>
+    </section>
+
+    <!-- Services Section -->
+    <div class="container" id="services">
+        <h2 class="section-title">Legal Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Writ Petitions</h3>
+                <p>High Court me Article 226/227 ke tehat Civil & Service Matters par Writ Petition filing.</p>
+            </div>
+            <div class="service-card">
+                <h3>Criminal Matters</h3>
+                <p>Bail Applications, Anticipatory Bail, Criminal Appeals aur 482 Applications.</p>
+            </div>
+            <div class="service-card">
+                <h3>Civil & Property</h3>
+                <p>Property disputes, Stay Orders, Land Acquisition aur Civil Appeals.</p>
+            </div>
+            <div class="service-card">
+                <h3>Legal Opinion</h3>
+                <p>Legal documents ki scrutiny aur High Court matters par expert legal guidance.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Payment Section -->
+    <div class="container" id="contact">
+        <h2 class="section-title">Contact & Consultation Fee</h2>
+        <div class="flex-container">
+            
+            <!-- Contact Form -->
+            <div class="form-box">
+                <h3 style="margin-bottom: 15px; color: #1a252f;">Send Case Query</h3>
+                <form id="legalForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required placeholder="Aapka naam">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" required placeholder="Mobile number">
+                    </div>
+                    <div class="form-group">
+                        <label>Case Type</label>
+                        <input type="text" placeholder="e.g., Bail, Writ Petition, Civil">
+                    </div>
+                    <div class="form-group">
+                        <label>Case Details</label>
+                        <textarea rows="4" placeholder="Apne matter ki brief jaankari dein"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Submit Case Query</button>
+                </form>
+            </div>
+
+            <!-- Payment Box -->
+            <div class="payment-box" id="payment">
+                <h3>Online Consultation Fee</h3>
+                <p>Legal advice aur file study ke liye consultation fee online pay karein.</p>
+                
+                <div class="qr-placeholder">
+                    [ UPI QR Code Here ]
+                </div>
+                
+                <p style="font-size: 0.9rem; margin-bottom: 15px;">UPI ID: <strong>yourname@upi</strong></p>
+                
+                <!-- Direct Payment Link Button (e.g., Razorpay / Paytm Link) -->
+                <a href="https://razorpay.me/" target="_blank" class="btn" style="display: block; margin-top: 15px;">Pay Fee via Card/UPI</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Adv. [Aapka Naam] | Allahabad High Court, Prayagraj. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;">Disclaimer: As per Advocates Act & Bar Council of India rules, this website is meant only for information purposes.</p>
+    </footer>
+
+    <script>
+        document.getElementById('legalForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Aapki query submit ho gayi hai. Hum aapse jald hi sampark karenge.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
